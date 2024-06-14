@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --foreground-rgb: 255, 255, 255; */
+    --foreground-rgb: 67, 20, 7;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 255, 247, 233;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      #fff) #fff
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+
+.btn-primary {
+  @apply bg-blue-950 hover:bg-white text-white hover:text-blue-950 border-2 border-blue-950 py-3 px-4 rounded-3xl transition-all;
+}
+
+.btn-outline {
+  @apply bg-white hover:bg-blue-950 text-blue-950 hover:text-white border-2 border-blue-950 py-3 px-4 rounded-3xl transition-all;
+}
+
+
+.gradient-text {
+  background: linear-gradient(to right, #10b981, #0d9488);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.negrita {
+  color: #000;
+  font-weight: bold;
+}
+
+.bg-img {
+  background-image: url(/images/image.jpg);
+  /* width: 100vw; */
+  height: 115vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* opacity: 0.5; */
+}
+
+.title {
+  @apply text-5xl font-bold text-gray-800 
+}
+
+.subTitle {
+  @apply text-4xl font-bold text-gray-800 
+}
