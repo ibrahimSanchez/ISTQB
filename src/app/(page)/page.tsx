@@ -124,7 +124,7 @@ export default function Home() {
       {
         //TODO: Poner foto de fondo
       }
-      <section className="py-24 sm:px-14 mt-14 bg-blue-400 flex flex-col text-center">
+      <section className="py-24 sm:px-14 mt-14 bg-blue-300 flex flex-col text-center">
 
         <h2 className="subTitle mb-10">
           Glosario ISTQB®

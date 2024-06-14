@@ -1,15 +1,15 @@
-// 'use client';
+'use client';
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
-// import { useUiStore } from "@/store";
 
 
 
 export const TopMenu = () => {
 
 
-    // const openSideMenu = useUiStore(state => state.openSideMenu)
+    const pathname = usePathname();
 
     return (
         <nav className="shadow flex px-10 justify-between text-sm items-center w-full border p-5 fixed bg-white">
@@ -26,20 +26,23 @@ export const TopMenu = () => {
                 </div>
 
                 <Link
-                    className="mx-4 hover:text-blue-800 transition"
+                    className={`mx-4 hover:text-blue-800 transition 
+                    ${pathname == "/about" ? "active" : ""}`}
                     href='/about'>
                     Sobre nosotros
                 </Link>
 
                 <Link
-                    className="mx-4 hover:text-blue-800 transition"
-                    href='/'>
+                    className={`mx-4 hover:text-blue-800 transition 
+                    ${pathname == "/certificaciones" ? "active" : ""}`}
+                    href='/certificaciones'>
                     Certificaciones
                 </Link>
 
                 <Link
-                    className="mx-4 hover:text-blue-800 transition"
-                    href='/'>
+                    className={`mx-4 hover:text-blue-800 transition 
+                    ${pathname == "/entrenamiento" ? "active" : ""}`}
+                    href='/entrenamiento'>
                     Entrenamiento y exámenes
                 </Link>
 

@@ -98,3 +98,8 @@ body {
 .subTitle {
   @apply text-4xl font-bold text-gray-800 
 }
+
+
+.active {
+  @apply underline text-blue-800
+}

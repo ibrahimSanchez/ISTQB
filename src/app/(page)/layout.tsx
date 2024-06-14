@@ -1,4 +1,4 @@
-import { Footer, Sidebar, TopMenu } from "@/components";
+import { Footer, TopMenu } from "@/components";
 
 
 export default function RootLayout({ children }: Readonly<{
