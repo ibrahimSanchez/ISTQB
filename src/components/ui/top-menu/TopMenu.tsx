@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
@@ -14,35 +15,38 @@ export const TopMenu = () => {
     return (
         <nav className="shadow flex px-10 justify-between text-sm items-center w-full border p-5 fixed bg-white">
 
+            {/* Logo */}
+            <div className="mx-4">
+                <Link href='/'>
+                    <Image
+                        alt="Logo"
+                        width={70}
+                        height={70}
+                        src="/logo.jpg"
+                    />
+                </Link>
+            </div>
             <div className="flex">
 
-                {/* Logo */}
-                <div className="mx-4">
-                    <Link href='/'>
-                        <span className="antialiased font-bold">
-                            LOGO
-                        </span>
-                    </Link>
-                </div>
 
                 <Link
-                    className={`mx-4 hover:text-blue-800 transition 
+                    className={`mx-4 hover:text-blue-950 transition 
                     ${pathname == "/about" ? "active" : ""}`}
                     href='/about'>
                     Sobre nosotros
                 </Link>
 
                 <Link
-                    className={`mx-4 hover:text-blue-800 transition 
-                    ${pathname == "/certificaciones" ? "active" : ""}`}
-                    href='/certificaciones'>
+                    className={`mx-4 hover:text-blue-950 transition 
+                    ${pathname == "/certifications" ? "active" : ""}`}
+                    href='/certifications'>
                     Certificaciones
                 </Link>
 
                 <Link
-                    className={`mx-4 hover:text-blue-800 transition 
-                    ${pathname == "/entrenamiento" ? "active" : ""}`}
-                    href='/entrenamiento'>
+                    className={`mx-4 hover:text-blue-950 transition 
+                    ${pathname == "/training" ? "active" : ""}`}
+                    href='/training'>
                     Entrenamiento y exámenes
                 </Link>
 

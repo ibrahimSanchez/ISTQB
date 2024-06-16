@@ -10,7 +10,7 @@ interface Props {
 
 export const CardText = ({ title, text, textLink }: Props) => {
     return (
-        <div className="max-w-sm p-6 text-left">
+        <div className="max-w-sm p-6 text-left shadow">
 
             <h5 className="mb-4 text-xl font-semibold tracking-tight text-gray-900">
                 {title}

@@ -31,7 +31,7 @@ export default function About() {
 
       <div>
 
-        <p className="leading-7s text-gray-600">
+        <p className="leading-7 text-gray-600">
           ISTQB® es el esquema de certificación líder a nivel mundial en el campo de las pruebas de software.
           ISTQB® estableció, y continúa evolucionando, el esquema de probador certificado reconocido
           internacionalmente, que es una cartera de certificaciones que desarrollan, amplían y validan
