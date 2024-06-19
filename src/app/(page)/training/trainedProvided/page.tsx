@@ -1,16 +1,26 @@
+import Link from "next/link";
 
 
 
 
 
-export default function Training() {
+export default function TrainedProvided() {
     return (
-        <div className="mt-28 sm:px-14">
-            <h1 className="subTitle mb-2">Encuentre proveedores de capacitación</h1>
+        <>
+            <div className="flex justify-between">
+                <h1 className="subTitle mb-2">Encuentre proveedores de capacitación</h1>
+                <Link
+                    className='hover:text-blue-800 transition content-end mb-3'
+                    href='/training/examProvided'>
+                   Encuentre un proveedor de exámenes
+                </Link>
+            </div>
             {/* line separator */}
             <div className="w-full h-px bg-blue-950 mb-7" />
 
-
+            <p className="text-sm text-gray-600 my-7">
+                Encuentre cualquiera de los muchos proveedores de capacitación acreditados por ISTQB® en todo el mundo
+            </p>
 
             <div className="mb-16">
                 {/* bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  */}
@@ -103,6 +113,6 @@ export default function Training() {
             {/* <div className="w-full h-px bg-blue-950 mb-7" /> */}
 
 
-        </div>
+        </>
     )
 }

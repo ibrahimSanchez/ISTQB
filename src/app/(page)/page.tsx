@@ -1,5 +1,6 @@
 import { CardImgText, CardText } from "@/components";
 import Image from "next/image";
+import Link from "next/link";
 import { IoSearchOutline } from "react-icons/io5";
 
 
@@ -36,16 +37,15 @@ export default function Home() {
           </p>
 
           <div className="flex">
-            <button className="btn-primary my-8">
-              <a href="#">
-                Nuestras certificaciones
-              </a>
-            </button>
-            <button className="btn-outline my-8 mx-8">
-              <a href="#">
-                Trabaja con nosotros
-              </a>
-            </button>
+            <Link href="/certifications"
+              className="btn-primary my-8">
+              Nuestras certificaciones
+            </Link>
+
+            <a href="#workWithUs"
+              className="btn-outline my-8 mx-8">
+              Trabaja con nosotros
+            </a>
           </div>
 
         </div>
@@ -81,26 +81,32 @@ export default function Home() {
             title="Encuentre una certificación"
             text="Explore información clave y descargue programas de estudios y exámenes de muestra en nuestra base de conocimientos gratuita"
             textLink="Nuestras certificaciones"
+            link="/certifications"
           />
           <CardText
             title="Encuentre formación acreditada"
             text="Elija entre más de 300 proveedores de formación acreditados líderes en todo el mundo"
             textLink="Nuestros proveedores de formación acreditados"
+            link="/training/trainedProvided"
           />
           <CardText
             title="Encontrar un examen"
             text="Identifique proveedores de exámenes en su área que ofrezcan el examen de certificación seleccionado"
             textLink="Nuestros proveedores de exámenes"
+            link="/training/examProvided"
           />
           <CardText
             title="Consulte el Registro de candidatos exitosos (SCR)"
             text="Explore la lista de personas certificadas"
             textLink="Nuestro SCR"
+            link="#"
           />
 
         </div>
 
-      </section >
+      </section>
+
+
 
 
 
@@ -124,7 +130,7 @@ export default function Home() {
       {
         //TODO: Poner foto de fondo
       }
-      <section className="py-24 sm:px-14 mt-14 bg-blue-300 flex flex-col text-center">
+      <section className="py-24 sm:px-14 bg-blue-300 flex flex-col text-center">
 
         <h2 className="subTitle mb-10">
           Glosario ISTQB®
@@ -166,7 +172,7 @@ export default function Home() {
 
       {/* Section 5 */}
 
-      <section className="py-20 sm:px-14 flex flex-col text-center" >
+      <section className="py-20 sm:px-14 flex flex-col text-center" id="workWithUs" >
 
         <h2 className="subTitle mb-6">
           Trabaja Con Nosotros Y Participa

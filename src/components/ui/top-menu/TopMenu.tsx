@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { IoSearchOutline } from "react-icons/io5";
 
 
-
 export const TopMenu = () => {
 
 
@@ -45,10 +44,12 @@ export const TopMenu = () => {
 
                 <Link
                     className={`mx-4 hover:text-blue-950 transition 
-                    ${pathname == "/training" ? "active" : ""}`}
-                    href='/training'>
-                    Entrenamiento y exámenes
+                    ${(pathname == "/training/examProvided" || pathname == "/training/trainedProvided") ? "active" : ""}`}
+                    href='/training/trainedProvided'
+                    >
+                    Entrenamiento y exámenes 
                 </Link>
+
 
             </div>
 
